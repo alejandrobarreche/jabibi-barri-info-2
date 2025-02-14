@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /* Estilo general */
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .input-field {
+      border: 2px solid #ccc;
+      padding: 8px;
+      font-size: 14px;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    /* Estilo cuando hay error */
+    .input-field.error {
+      border: 2px solid red;
+    }
+
+    /* Mensaje de error */
+    .hidden {
+      display: none;
+      color: red;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+<form id="myForm">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" class="input-field">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" class="input-field">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p id="error-message" class="hidden">Please fill in all fields.</p>
+</body>
+<script src="scriptt.js"></script>
+</html>

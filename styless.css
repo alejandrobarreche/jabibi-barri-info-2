@@ -1,0 +1,209 @@
+/* Añadir un subrayado */
+
+
+p {
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+}
+
+
+
+/* Caja de otro color en un input */
+
+input:focus {
+    border: 2px solid blue;
+    outline: none; /* Opcional: elimina el contorno predeterminado del navegador */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+
+/* Linea horizontal divisoria, en html <hr> */
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: gray;
+    margin: 20px 0;
+}
+
+/* segunda opcion de lo anterior */
+.algo::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: gray;
+    margin: 10px auto;
+}
+
+
+
+
+
+/* */
+
+.button {
+    background-color: #4b68b4; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: relative; /* Necesario para la sombra */
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Sombra inferior para simular el efecto */
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background-color: #2f4a80; /* Color de la sombra */
+    border-radius: 3px;
+}
+
+/* Efecto al presionar */
+.button:active {
+    transform: translateY(3px); /* Mueve el botón hacia abajo */
+}
+
+.button:active::after {
+    bottom: -2px; /* Reduce la sombra cuando se presiona */
+}
+
+
+
+
+
+/* FORMULARIO MODELO EXAMEN */
+
+/*
+<form class="form">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" placeholder="John">
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" placeholder="Smith">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" placeholder="email@example.com">
+        <div class="underline"></div> <!-- Línea inferior decorativa -->
+    </div>
+
+    <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments"></textarea>
+    </div>
+
+    <button class="submit-button">SUBMIT</button>
+    <span class="press-enter"> or press <strong>enter</strong></span>
+</form>
+ */
+
+/* Contenedor del formulario */
+.form {
+    width: 400px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Alineación de los inputs en una fila */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los campos de entrada */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #3b5998;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Estilo cuando el input está enfocado */
+input:focus, textarea:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+/* Línea inferior decorativa debajo del email */
+.underline {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, red, blue);
+    margin-top: 5px;
+}
+
+/* Botón de envío */
+.submit-button {
+    background-color: #4b68b4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+/* Sombra inferior para el botón */
+.submit-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background-color: #2f4a80;
+    border-radius: 3px;
+}
+
+/* Efecto al presionar el botón */
+.submit-button:active {
+    transform: translateY(3px);
+}
+
+.submit-button:active::after {
+    bottom: -2px;
+}
+
+/* Estilos para el texto "or press enter" */
+.press-enter {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #4b68b4;
+}

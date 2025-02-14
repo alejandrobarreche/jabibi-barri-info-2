@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 400px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    background: url('imagenexamen.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+}
+
+.form-group {
+    text-align: left;
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: red;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border-color: blue;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #1a4ca4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #143b82;
+}
+
+.enter-text {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.enter-key {
+    color: blue;
+    font-weight: bold;
+}
+
+.error {
+    border-color: red !important;
+}

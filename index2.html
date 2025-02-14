@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencias para el Examen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        pre { background: #ecf0f1; padding: 10px; border-radius: 5px; }
+        .container { max-width: 800px; margin: auto; }
+        .section { margin-bottom: 20px; }
+        .form-group { display: flex; align-items: center; margin-bottom: 10px; }
+        .form-group label { width: 150px; }
+        .form-group input { flex: 1; padding: 5px; }
+        .column-group { display: flex; flex-direction: column; }
+        .separator { border-bottom: 2px solid #000; margin: 20px 0; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Resumen de HTML, CSS y JavaScript</h1>
+
+    <div class="section">
+        <h2>HTML</h2>
+        <h3>Elementos básicos</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>Mi Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1>Hola Mundo&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        <h3>Formularios</h3>
+        <div class="separator">Ejemplo de formulario</div>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="column-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            <div class="column-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2>CSS</h2>
+        <h3>Estilos básicos</h3>
+        <pre>body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: blue;
+}</pre>
+        <h3>Modelo de caja</h3>
+        <pre>.contenedor {
+    width: 300px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}</pre>
+    </div>
+
+    <div class="section">
+        <h2>JavaScript</h2>
+        <h3>Variables y Funciones</h3>
+        <pre>let nombre = "Juan";
+
+function saludar() {
+    console.log("Hola, " + nombre);
+}
+saludar();</pre>
+        <h3>Eventos y DOM</h3>
+        <pre>document.getElementById("btn").addEventListener("click", function() {
+    alert("Botón presionado");
+});</pre>
+    </div>
+</div>
+</body>
+</html>
